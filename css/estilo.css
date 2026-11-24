@@ -1,0 +1,199 @@
+
+body {
+    background: linear-gradient(#360b17, #360b17, #360b17);
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Cabecalho */
+header {
+    background-color: #6d0e29;
+    padding: 20px;
+    border-bottom: 2px solid rgb(228, 216, 112);
+}
+
+header h2 {
+    color: rgb(228, 226, 113);
+    letter-spacing: 3px;
+}
+
+/* Titulo */
+h1 {
+    color: #ffe4a3;
+    font-size: 45px;
+    margin-top: 35px;
+    animation: brilho 2s infinite alternate;
+}
+
+.subtitulo {
+    font-size: 18px;
+    color: #ffe8df;
+}
+
+/* Estrela */
+.estrela {
+    color: gold;
+    font-size: 45px;
+    animation: girar 4s infinite linear,
+               piscar 1s infinite alternate;
+}
+
+/* rena */
+.rena {
+    font-size: 100px;
+    margin: 10px;
+    animation: subir 2s infinite alternate;
+}
+
+/* Mensagem */
+.mensagem {
+    background-color: #681a2b;
+    padding: 25px;
+    margin: 30px auto;
+    width: 70%;
+    max-width: 550px;
+    border: 2px solid #e96b6b;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.mensagem h2 {
+    color: #ffe4a3;
+}
+
+.mensagem p {
+    line-height: 1.6;
+}
+
+/* Neon da mensagem */
+.mensagem:hover {
+    animation: neon 1s infinite alternate;
+    transform: scale(1.03);
+}
+
+/* Presentes */
+.presentes {
+    font-size: 50px;
+    margin: 25px;
+    animation: pular 2s infinite;
+}
+
+/* Neve */
+.neve {
+    position: fixed;
+    top: -30px;
+    color: rgba(247, 247, 247, 0.836);
+    font-size: 25px;
+    animation: cair 6s infinite linear;
+    pointer-events: none;
+}
+
+.neve1 { left: 10%; }
+.neve2 { left: 25%; animation-delay: 1s; }
+.neve3 { left: 40%; animation-delay: 2s; }
+.neve4 { left: 60%; animation-delay: 3s; }
+.neve5 { left: 80%; animation-delay: 1s; }
+.neve6 { left: 95%; animation-delay: 4s; }
+
+/* Rodape */
+footer {
+    background-color: #360b17;
+    padding: 22px;
+    color: gold;
+    border-top: 2px solid gold;
+}
+
+/* Animacoes */
+
+@keyframes brilho {
+    from {
+        text-shadow: 0 0 5px gold;
+    }
+
+    to {
+        text-shadow: 0 0 25px gold;
+    }
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes piscar {
+    from {
+        opacity: 0.3;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes subir {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes iluminar {
+    from {
+        filter: drop-shadow(0 0 5px gold);
+    }
+
+    to {
+        filter: drop-shadow(0 0 20px gold);
+    }
+}
+
+@keyframes pular {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes cair {
+    from {
+        top: -30px;
+    }
+
+    to {
+        top: 100%;
+    }
+}
+
+/* Luz neon */
+@keyframes neon {
+    from {
+        box-shadow: 0 0 10px #ffb6c1,
+                    0 0 20px #ff4d6d;
+        border-color: #ffb6c1;
+    }
+
+    to {
+        box-shadow: 0 0 20px #ffd700,
+                    0 0 35px #ff4d6d;
+        border-color: gold;
+    }
+}
